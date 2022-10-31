@@ -1,0 +1,47 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'picosdk-malloc'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--features=trace",
+                    "--target=aarch64-apple-darwin",
+                    "--no-run",
+                    "--lib",
+                    "--package=picosdk-malloc"
+                ],
+                "filter": {
+                    "name": "picosdk-malloc",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'tests'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--features=trace",
+                    "--target=aarch64-apple-darwin",
+                    "--no-run",
+                    "--test=tests",
+                    "--package=picosdk-malloc"
+                ],
+                "filter": {
+                    "name": "tests",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

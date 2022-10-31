@@ -1,0 +1,31 @@
+[package]
+name = "picosdk-malloc"
+version = "0.1.0"
+edition = "2021"
+authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
+keywords = []
+categories = []
+description = "A heap-allocated container that uses the Pico-SDK's malloc/free"
+license = "BSD-2-Clause OR MIT"
+repository = "https://github.com/KizzyCode/picosdk-malloc-rust-rp2040"
+readme = "README.md"
+
+
+[badges]
+
+
+[features]
+default = []
+trace = []
+
+
+[dependencies]
+
+[dev-dependencies]
+
+
+[profile.release]
+overflow-checks = true
+
+[profile.bench]
+overflow-checks = true
